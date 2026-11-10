@@ -1,0 +1,545 @@
+{
+  "id": "arcgis-pro-sample",
+  "title": "ArcGIS Pro (sample exam)",
+  "description": "Sample questions on core ArcGIS Pro skills. Not official Esri exam content; each answer links to the ArcGIS Pro documentation.",
+  "bundles": [
+    {
+      "id": "projects-maps-layouts",
+      "title": "Bundle 1: Projects, maps and layouts",
+      "description": "Projects, the Contents pane, scenes, symbology, labelling, coordinate systems, layouts and sharing.",
+      "questions": [
+        {
+          "id": "pml-01",
+          "question": "Which file extension does an ArcGIS Pro project file use?",
+          "answers": [".aprx", ".mxd", ".lyrx", ".ppkx"],
+          "correct": 0,
+          "explanation": "ArcGIS Pro projects are saved as .aprx files. .mxd is an ArcMap document, .lyrx is a layer file and .ppkx is a project package.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Create a project",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/projects/create-a-new-project.html"
+          }
+        },
+        {
+          "id": "pml-02",
+          "question": "By default, which items does ArcGIS Pro create alongside a new project?",
+          "answers": [
+            "A file geodatabase (<project name>.gdb) and a toolbox (<project name>.atbx) in a new home folder",
+            "An enterprise geodatabase connection and a Python toolbox",
+            "A mobile geodatabase and a layer file for each map",
+            "Nothing; you must add a geodatabase and toolbox manually"
+          ],
+          "correct": 0,
+          "explanation": "A new project gets a home folder containing a default file geodatabase and a default toolbox, both named after the project. Geoprocessing output and models are saved there unless you choose otherwise.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Create a project",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/projects/create-a-new-project.html"
+          }
+        },
+        {
+          "id": "pml-03",
+          "question": "You need to send a colleague a single file containing your project, its maps and its data. What do you create?",
+          "answers": ["A project package (.ppkx)", "A project template (.aptx)", "A layer file (.lyrx)", "A map file (.mapx)"],
+          "correct": 0,
+          "explanation": "A project package bundles the project and the data it references into one .ppkx file that can be shared and unpacked by another ArcGIS Pro user.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Share a project package",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/sharing/overview/project-package.html"
+          }
+        },
+        {
+          "id": "pml-04",
+          "question": "Which Contents pane tab do you use to change the order in which layers draw?",
+          "answers": ["Drawing Order", "Data Source", "Selection", "Editing"],
+          "correct": 0,
+          "explanation": "The Drawing Order tab arranges layers in the order they display in the map. Drag a layer to reposition it.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Contents pane",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/map-authoring/contents-pane.html"
+          }
+        },
+        {
+          "id": "pml-05",
+          "question": "In the Contents pane's Drawing Order view, how does a layer at the top of the list display?",
+          "answers": [
+            "It draws above the layers listed below it",
+            "It draws beneath all other layers",
+            "It draws only when selected",
+            "Its position in the list has no effect on drawing"
+          ],
+          "correct": 0,
+          "explanation": "Layers at the top of the Drawing Order list draw above those below them.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Contents pane",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/map-authoring/contents-pane.html"
+          }
+        },
+        {
+          "id": "pml-06",
+          "question": "Your 3D data uses a local projected coordinate system for a city. Which scene viewing mode is recommended?",
+          "answers": ["Local scene", "Global scene", "2D map with a 3D basemap", "Linked map view"],
+          "correct": 0,
+          "explanation": "Global scenes support only WGS 84 and CGCS 2000. If the data is in another spatial reference, a local scene is recommended to avoid distortion from reprojection.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Scenes",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/map-authoring/scenes.html",
+            "section": "Local and global scenes"
+          }
+        },
+        {
+          "id": "pml-07",
+          "question": "Which geographic coordinate systems do global scenes support?",
+          "answers": ["WGS 84 and CGCS 2000", "Any projected coordinate system", "Web Mercator only", "NZGD2000 and WGS 84 only"],
+          "correct": 0,
+          "explanation": "Global scenes support the WGS 84 and CGCS 2000 geographic coordinate systems. Use a local scene for other spatial references.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Scenes",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/map-authoring/scenes.html",
+            "section": "Local and global scenes"
+          }
+        },
+        {
+          "id": "pml-08",
+          "question": "Which layout element displays the contents of a map or scene on a layout?",
+          "answers": ["Map frame", "Legend", "Dynamic text", "Graphics layer"],
+          "correct": 0,
+          "explanation": "A map frame is the layout element that shows a map or scene. Legends, scale bars and other map surrounds are linked to a map frame.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Add and modify map frames",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/layouts/add-and-modify-map-frames.html"
+          }
+        },
+        {
+          "id": "pml-09",
+          "question": "In a spatial map series, what defines the map extent of each page?",
+          "answers": [
+            "A feature in the index layer",
+            "A saved bookmark",
+            "The extent of the default basemap",
+            "A page number field in the project"
+          ],
+          "correct": 0,
+          "explanation": "A spatial map series iterates through the features of an index layer, creating one page per feature. Each page's extent comes from its feature.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Introduction to spatial map series",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/layouts/spatial-map-series.html"
+          }
+        },
+        {
+          "id": "pml-10",
+          "question": "You want a layer to show only parcels where ZONE = 'Residential', without changing the source data. What do you use?",
+          "answers": ["A definition query", "The Delete Features tool", "A coded value domain", "The Clip tool"],
+          "correct": 0,
+          "explanation": "A definition query filters which features a layer displays and uses. The underlying data is not altered.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Filter features with definition queries",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/layer-properties/definition-query.html"
+          }
+        },
+        {
+          "id": "pml-11",
+          "question": "Which classification method creates class breaks from natural groupings inherent in the data?",
+          "answers": ["Natural breaks (Jenks)", "Equal interval", "Defined interval", "Standard deviation"],
+          "correct": 0,
+          "explanation": "Natural breaks (Jenks) groups similar values and maximises differences between classes. The breaks are data-specific, so they are not ideal for comparing maps built from different data.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Data classification methods",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/layer-properties/data-classification-methods.html",
+            "section": "Natural breaks (Jenks)"
+          }
+        },
+        {
+          "id": "pml-12",
+          "question": "Classification methods such as quantile and equal interval apply to which kind of field?",
+          "answers": [
+            "Numeric fields used for graduated symbology",
+            "Text fields used for unique values symbology",
+            "Global ID fields",
+            "Geometry fields only"
+          ],
+          "correct": 0,
+          "explanation": "Classification methods group numeric field values into classes for graduated symbology.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Data classification methods",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/layer-properties/data-classification-methods.html"
+          }
+        },
+        {
+          "id": "pml-13",
+          "question": "You want highways and local roads in the same layer labelled with different text symbols. What do you configure?",
+          "answers": [
+            "Multiple label classes, each with an SQL query",
+            "Two definition queries on the same layer",
+            "A separate map for each road type",
+            "A coded value domain on the road type field"
+          ],
+          "correct": 0,
+          "explanation": "Label classes let you label subsets of features in one layer with different properties. An SQL query on each class determines which features it labels.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Use label classes",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/text/label-classes.html"
+          }
+        },
+        {
+          "id": "pml-14",
+          "question": "You add layers with different coordinate systems to one map. What does ArcGIS Pro do?",
+          "answers": [
+            "Projects them on the fly to the map's coordinate system for display, without changing the source data",
+            "Permanently reprojects the source data to match the first layer",
+            "Refuses to add layers whose coordinate system differs from the map",
+            "Displays each layer in its own coordinate system, so they do not align"
+          ],
+          "correct": 0,
+          "explanation": "The map has a single coordinate system. Layers in other coordinate systems are projected on the fly for display; use the Project tool if you need to change the data itself.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Coordinate systems, map projections, and transformations",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/coordinate-systems-and-projections.html"
+          }
+        },
+        {
+          "id": "pml-15",
+          "question": "Where do you set a map's coordinate system directly by choosing one from a list?",
+          "answers": [
+            "Map Properties dialog box, Coordinate Systems tab",
+            "Layer Properties dialog box, Source tab",
+            "Catalog pane, geodatabase properties",
+            "Project Options, Display tab"
+          ],
+          "correct": 0,
+          "explanation": "Right-click the map in the Contents pane, click Properties, then open the Coordinate Systems tab of the Map Properties dialog box.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Work with coordinate systems",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/specify-a-coordinate-system.html"
+          }
+        },
+        {
+          "id": "pml-16",
+          "question": "Which type of coordinate system locates features using latitude and longitude in angular units?",
+          "answers": ["Geographic coordinate system", "Projected coordinate system", "Vertical coordinate system", "Local engineering grid"],
+          "correct": 0,
+          "explanation": "A geographic coordinate system uses angular units (degrees) on a three-dimensional model of the earth. A projected coordinate system uses linear units on a flat surface.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Coordinate systems, map projections, and transformations",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/properties/coordinate-systems-and-projections.html"
+          }
+        },
+        {
+          "id": "pml-17",
+          "question": "What does a bookmark in a map save?",
+          "answers": [
+            "A geographic location (extent) you can navigate back to",
+            "A copy of the selected features",
+            "The symbology of every layer",
+            "A snapshot of the attribute table"
+          ],
+          "correct": 0,
+          "explanation": "Bookmarks save map locations so you can return to them later. They can also drive a bookmark map series on a layout.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Bookmarks",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/mapping/navigation/bookmarks.html"
+          }
+        },
+        {
+          "id": "pml-18",
+          "question": "Which tool selects features based on an SQL query of their attribute values?",
+          "answers": ["Select Layer By Attribute", "Select Layer By Location", "Spatial Join", "Make Query Layer"],
+          "correct": 0,
+          "explanation": "Select Layer By Attribute adds, updates or removes a selection using an attribute (SQL) query. Select Layer By Location selects using spatial relationships.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Select Layer By Attribute (Data Management Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/select-layer-by-attribute.html"
+          }
+        },
+        {
+          "id": "pml-19",
+          "question": "You want your ArcGIS Pro map to open in Map Viewer in ArcGIS Online. What do you share?",
+          "answers": ["A web map", "A map package (.mpkx)", "A layer file (.lyrx)", "A project template (.aptx)"],
+          "correct": 0,
+          "explanation": "Sharing a web map publishes the map's layers and saves a web map item that opens in Map Viewer and web apps. A map package is for ArcGIS Pro users.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Share a web map",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/sharing/overview/share-a-web-map.html"
+          }
+        },
+        {
+          "id": "pml-20",
+          "question": "When you share a web feature layer to ArcGIS Online, what type of layer is created?",
+          "answers": [
+            "A hosted feature layer, with the data copied to ArcGIS Online",
+            "A map image layer that references your local data",
+            "A tile layer cached from your map",
+            "A layer file stored in your project folder"
+          ],
+          "correct": 0,
+          "explanation": "Sharing a web feature layer to ArcGIS Online copies all data and creates a hosted feature layer. You need privileges to publish hosted feature layers.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Share a web feature layer",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/sharing/overview/web-feature-layer.html"
+          }
+        }
+      ]
+    },
+    {
+      "id": "geodatabases-geoprocessing",
+      "title": "Bundle 2: Geodatabases and geoprocessing",
+      "description": "Geodatabase types, domains, subtypes, relationship classes, editing, analysis tools, ModelBuilder and ArcPy.",
+      "questions": [
+        {
+          "id": "gdg-01",
+          "question": "How is a file geodatabase stored on disk?",
+          "answers": [
+            "As a collection of files in a folder",
+            "As a single SQLite file",
+            "As tables in SQL Server or Oracle",
+            "As a single .zip archive"
+          ],
+          "correct": 0,
+          "explanation": "A file geodatabase is a collection of files in a folder (with a .gdb extension) that stores, queries and manages spatial and nonspatial data.",
+          "source": {
+            "title": "ArcGIS Pro documentation: File geodatabases",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/geodatabases/manage-file-gdb/file-geodatabases.html"
+          }
+        },
+        {
+          "id": "gdg-02",
+          "question": "Which geodatabase type is stored in an SQLite database as a single file?",
+          "answers": ["Mobile geodatabase", "File geodatabase", "Enterprise geodatabase", "Personal (Access) geodatabase"],
+          "correct": 0,
+          "explanation": "Mobile geodatabases are stored in SQLite, a single cross-platform file on disk, which makes them portable and good for data exchange.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Mobile geodatabases",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/geodatabases/manage-mobile-gdb/mobile-geodatabases.html"
+          }
+        },
+        {
+          "id": "gdg-03",
+          "question": "What must all feature classes in a feature dataset share?",
+          "answers": ["A common coordinate system", "The same geometry type", "The same attribute fields", "The same subtypes"],
+          "correct": 0,
+          "explanation": "A feature dataset is a collection of related feature classes that share a common coordinate system. Feature datasets are needed for controller datasets such as topology and parcel fabrics.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Create and manage feature datasets in ArcGIS Pro",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/feature-datasets/feature-datasets-in-arcgis-pro.html"
+          }
+        },
+        {
+          "id": "gdg-04",
+          "question": "Which geodatabase element restricts a field to a specified list of valid values, each with a description?",
+          "answers": ["Coded value domain", "Range domain", "Relationship class", "Attribute index"],
+          "correct": 0,
+          "explanation": "A coded value domain specifies a set of valid values. Each code (for example 1) has a user-friendly description (for example Pavement). A range domain sets a valid minimum and maximum instead.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Introduction to attribute domains",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/geodatabases/overview/an-overview-of-attribute-domains.html"
+          }
+        },
+        {
+          "id": "gdg-05",
+          "question": "When you add a subtype with the Add Subtype tool, what data type is the subtype code?",
+          "answers": ["Integer (Long)", "Text", "Date", "Double"],
+          "correct": 0,
+          "explanation": "Each subtype has a unique integer code and a text description.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Add Subtype (Data Management Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/add-subtype.html"
+          }
+        },
+        {
+          "id": "gdg-06",
+          "question": "In a composite relationship class, what happens to related destination objects when you delete an origin object?",
+          "answers": [
+            "They are also deleted (cascade delete)",
+            "Their foreign key is set to Null",
+            "They are moved to a new origin object",
+            "Nothing; the delete is blocked"
+          ],
+          "correct": 0,
+          "explanation": "In a composite relationship, destination objects cannot exist independently of the origin, so deleting the origin deletes them. In a simple relationship, the destination's foreign key is set to Null instead.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Geodatabase relationship class types",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/relationships/geodatabase-relationship-class-types.html",
+            "section": "Composite relationship class type"
+          }
+        },
+        {
+          "id": "gdg-07",
+          "question": "Which pane do you use to create new features from feature templates?",
+          "answers": ["Create Features", "Catalog", "Geoprocessing", "Attributes"],
+          "correct": 0,
+          "explanation": "The Create Features pane lists feature templates for editable layers. Choose a template and a construction tool to create features.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Introduction to creating features",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/editing/introduction-to-creating-features.html"
+          }
+        },
+        {
+          "id": "gdg-08",
+          "question": "Which geoprocessing environment limits processing to features or rasters that fall within a set area?",
+          "answers": ["Extent", "Workspace", "Output Coordinate System", "Parallel Processing Factor"],
+          "correct": 0,
+          "explanation": "The Extent environment defines the area that tools process. Only data within the extent is processed.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Extent (environment setting)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/environment-settings/output-extent.html"
+          }
+        },
+        {
+          "id": "gdg-09",
+          "question": "You run Clip on roads using a council boundary. Which attributes does the output contain?",
+          "answers": [
+            "Only the attributes of the input (roads) features",
+            "Only the attributes of the clip (boundary) features",
+            "Attributes from both inputs",
+            "No attributes, only geometry"
+          ],
+          "correct": 0,
+          "explanation": "Clip output contains all the attributes of the input features. Use Intersect if you need attributes from both inputs.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Clip (Analysis Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/clip.html"
+          }
+        },
+        {
+          "id": "gdg-10",
+          "question": "Which tool computes the geometric intersection of input features and keeps attributes from all inputs?",
+          "answers": ["Intersect", "Clip", "Erase", "Merge"],
+          "correct": 0,
+          "explanation": "Intersect writes features or parts of features that overlap in all inputs, with attributes from each input.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Intersect (Analysis Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/intersect.html"
+          }
+        },
+        {
+          "id": "gdg-11",
+          "question": "In the Buffer tool, what does a Dissolve Type of All do?",
+          "answers": [
+            "Merges all buffers into a single feature, removing overlaps",
+            "Keeps a separate buffer for every input feature",
+            "Dissolves buffers only where attributes in a list of fields match",
+            "Deletes buffers that overlap other buffers"
+          ],
+          "correct": 0,
+          "explanation": "Dissolve Type All combines all buffers into a single feature with no overlap. None keeps individual buffers; List dissolves by shared values in chosen fields. With All or List, the output does not include the BUFF_DIST or ORIG_FID fields.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Buffer (Analysis Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/buffer.html"
+          }
+        },
+        {
+          "id": "gdg-12",
+          "question": "Which tool aggregates features based on matching values in one or more specified fields?",
+          "answers": ["Dissolve", "Merge", "Append", "Union"],
+          "correct": 0,
+          "explanation": "Dissolve aggregates features that share the same values in the dissolve fields, optionally calculating summary statistics.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Dissolve (Data Management Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/dissolve.html"
+          }
+        },
+        {
+          "id": "gdg-13",
+          "question": "You need each address point to carry the name of the suburb polygon it falls in, written to a new output. Which tool do you use?",
+          "answers": ["Spatial Join", "Add Join", "Append", "Select Layer By Location"],
+          "correct": 0,
+          "explanation": "Spatial Join transfers attributes from join features to target features based on a spatial relationship and writes the result to a new feature class.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Spatial Join (Analysis Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/analysis/spatial-join.html"
+          }
+        },
+        {
+          "id": "gdg-14",
+          "question": "What is the key difference between a join and a relate?",
+          "answers": [
+            "A join appends the other table's fields to the layer; a relate defines a link without appending fields",
+            "A join is permanent; a relate is temporary",
+            "A join works only on spatial data; a relate works only on tables",
+            "A join needs a common field; a relate does not"
+          ],
+          "correct": 0,
+          "explanation": "Both use a common key field. A join appends the fields of one table to another; a relate defines a relationship you can follow without appending fields.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Introduction to joins and relates",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/tables/joins-and-relates.html"
+          }
+        },
+        {
+          "id": "gdg-15",
+          "question": "You need to select all parcels that intersect a flood zone polygon. Which tool do you use?",
+          "answers": ["Select Layer By Location", "Select Layer By Attribute", "Clip", "Dissolve"],
+          "correct": 0,
+          "explanation": "Select Layer By Location selects features based on a spatial relationship (such as Intersect) to features in another layer.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Select Layer By Location (Data Management Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/select-layer-by-location.html"
+          }
+        },
+        {
+          "id": "gdg-16",
+          "question": "What is ModelBuilder?",
+          "answers": [
+            "A visual programming language for building geoprocessing workflows",
+            "A tool for building 3D building models",
+            "A Python package for machine learning",
+            "A wizard for creating geodatabase schemas"
+          ],
+          "correct": 0,
+          "explanation": "ModelBuilder is a visual programming language for building geoprocessing workflows that automate and document analysis and data management processes.",
+          "source": {
+            "title": "ArcGIS Pro documentation: What is ModelBuilder?",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/analysis/geoprocessing/modelbuilder/what-is-modelbuilder-.html"
+          }
+        },
+        {
+          "id": "gdg-17",
+          "question": "Which Python site package gives access to ArcGIS Pro geoprocessing tools?",
+          "answers": ["ArcPy", "arcgis.learn", "GDAL", "Shapely"],
+          "correct": 0,
+          "explanation": "ArcPy is the Python site package that provides geoprocessing tools, functions, classes and modules for ArcGIS Pro.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Introduction to ArcPy",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/arcpy/get-started/what-is-arcpy-.html"
+          }
+        },
+        {
+          "id": "gdg-18",
+          "question": "Where can you review and re-open geoprocessing tools you have already run in a project?",
+          "answers": ["The History pane", "The Catalog pane's Favorites tab", "The Contents pane", "The Python window only"],
+          "correct": 0,
+          "explanation": "Each tool you run adds an entry under the Geoprocessing tab of the History pane. Open it from Analysis > Geoprocessing > History.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Geoprocessing history",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/analysis/geoprocessing/basics/geoprocessing-history.html"
+          }
+        },
+        {
+          "id": "gdg-19",
+          "question": "What do raster pyramids do?",
+          "answers": [
+            "Store lower-resolution copies of a raster to speed up display",
+            "Compress a raster to reduce file size",
+            "Convert a raster to 3D for scenes",
+            "Store statistics used for symbology stretches"
+          ],
+          "correct": 0,
+          "explanation": "Pyramids are reduced-resolution copies of a raster. They speed up display by drawing only the resolution needed at the current scale.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Raster pyramids",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/help/data/imagery/raster-pyramids.html"
+          }
+        },
+        {
+          "id": "gdg-20",
+          "question": "Which of the following is NOT an expression type for the Calculate Field tool?",
+          "answers": ["C#", "Python", "Arcade", "SQL"],
+          "correct": 0,
+          "explanation": "Calculate Field supports Python, Arcade, SQL and VBScript expressions. C# is not supported.",
+          "source": {
+            "title": "ArcGIS Pro documentation: Calculate Field (Data Management Tools)",
+            "url": "https://doc.esri.com/en/arcgis-pro/latest/tool-reference/data-management/calculate-field.html"
+          }
+        }
+      ]
+    }
+  ]
+}

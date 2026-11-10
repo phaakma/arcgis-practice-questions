@@ -1,0 +1,18 @@
+{
+  "title": "ArcGIS Mock Exams",
+  "description": "Practice questions for Esri technical certification. Choose an exam to see its question bundles.",
+  "exams": [
+    {
+      "id": "esdp-2025",
+      "title": "ArcGIS Enterprise System Design Professional 2025",
+      "description": "Exam ESDP_2025 (ArcGIS Enterprise 11.4). Eight bundles of 20 questions: two sets covering each skill area (Physical Architecture, Solution Architecture, Deployment and Troubleshooting, Architectural Concepts), the second set focused on scenarios.",
+      "file": "data/exams/esdp-2025.json"
+    },
+    {
+      "id": "arcgis-pro-sample",
+      "title": "ArcGIS Pro (sample exam)",
+      "description": "Sample exam with two bundles covering ArcGIS Pro projects, maps, layouts, geodatabases and geoprocessing.",
+      "file": "data/exams/arcgis-pro-sample.json"
+    }
+  ]
+}
